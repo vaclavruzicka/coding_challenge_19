@@ -25,6 +25,8 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
     //If there is an error, set the error state to true.
     } catch (error) {
+        //Console logs any errors.
+        console.error('Error fetching tours:', error)
         setError(true)
         setLoading(false)
      }
