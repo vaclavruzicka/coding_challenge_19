@@ -2,7 +2,8 @@
 
 //Imports React and TourCard component.
 import React, { useState } from 'react'
-import TourCard from './TourCard,jsx'
+import TourCard from './TourCard.jsx'
+import { useEffect } from 'react'
 
 //Creates the Gallery component which displays a list of tours from an API.
 const Gallery = ({ tours, setTours, onRemove }) => {
@@ -18,7 +19,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
         try {
 
             //Fetches data from the API and sets the tours state.
-            const response = await fetch('https://course-api.com/react-tours-project')
+            const response = await fetch('https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project')
             const data = await response.json()
             setTours(data)
             setLoading(false)

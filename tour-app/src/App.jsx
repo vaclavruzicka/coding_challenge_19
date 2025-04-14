@@ -1,13 +1,12 @@
 import react, { useState } from 'react'
 import Gallery from './components/Gallery.jsx'
-import '.styles/styles.css'
+import './styles/styles.css'
 
+function App() {
 const [tours, setTours] = useState([])
 const removeTour = (id) => {
   setTours((prevTours) => prevTours.filter((tour) => tour.id !== id))
 }
-
-function App() {
 return (
   <main>
     <h1> Our Tours</h1>
