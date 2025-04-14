@@ -9,6 +9,8 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
     //State to manage loading and error states.
     const [loading, setLoading] = useState(true)
+
+    //Error state is set to null so that it checks for an error during the fetch process.
     const [error, setError] = useState(null)
 
     //Function to fetch tours from the API.
@@ -37,7 +39,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
     if(error) {
         return <h3>Something Went Wrong</h3>
     }
-    
+
     if(loading) {
         return <h3>Loading...</h3>
     }

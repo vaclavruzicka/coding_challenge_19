@@ -3,6 +3,7 @@
 //Imports React and useState.
 import React, { useState } from 'react';
 
+//Error state is set to null so that it checks for an error during the fetch process.
 //Creating the props for the TourCard component.
 const TourCard = ({id, name, info, price, image, onRemove}) => {
     const [readMore, setReadMore] = useState(false) //State to manage the read more functionality.
