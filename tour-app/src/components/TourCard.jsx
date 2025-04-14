@@ -13,7 +13,7 @@ const TourCard = ({id, name, info, price, image, onRemove}) => {
             {/* Creating the tour header with name and price */}
             <div className='tour-header'>
                 <h3>{name}</h3>
-                <h4>{price}</h4>
+                <h4>${price}</h4>
             </div>
             {/* Adding the image and info section */}
             <img src={image} alt={name}></img>
