@@ -7,11 +7,13 @@ const removeTour = (id) => {
   setTours((prevTours) => prevTours.filter((tour) => tour.id !== id))
 }
 
+function App() {
 return (
   <main>
     <h1> Our Tours</h1>
     <Gallery tours={tours} setTours={setTours} onRemove={removeTour} />
   </main>
 )
+}
 
 export default App
